@@ -1,0 +1,10 @@
+
+.container {
+    flex-flow: column wrap;
+   }
+   
+   .item {
+     flex: 0 32%;
+     height: 100px;
+     margin-bottom: 2%
+   }
