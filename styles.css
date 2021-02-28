@@ -1,16 +1,40 @@
 
 body {
-    background-color: rgb(22, 10, 5);}
+    background-color: rgb(255, 255, 255);}
+
+
+/* fondo negro alrededor de las cajas*/
+
+.big-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        padding: 2px;
+        background-color: rgb(0, 0, 0);
+           }
+
+/* lo mismo que el anterior pero lo pongo aparte para
+que cambie de color en versión tablet solo éste*/
+
+.big-container2 {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        padding: 2px;
+        background-color: rgb(0, 0, 0);
+               }
+    
 
 .container {
     display: flex;
     flex-flow: row wrap;
+    width: 95%;
     justify-content: space-around;
     padding: 10px;
     background-color: rgb(92, 92, 92);
    }
 
-   .item {
+.item {
     padding: 5px;
     width: 20%;
     height: 150px;
@@ -21,7 +45,7 @@ body {
 
 .bigitem {
     padding: 5px;
-    width: 54%;
+    width: 48%;
     height: 150px;
     margin-top: 10px;
     background-color: rgb(245, 14, 14);
@@ -32,13 +56,14 @@ body {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    width: 95%;
     padding: 5px;
     margin-top: 10px;
     background-color: rgb(243, 117, 0);
-   }
+}
 
       
-   .item2 {
+.item2 {
     padding: 10px;
     height: 150px;
     width: 100%;
@@ -47,20 +72,7 @@ body {
     margin-right: 11px;
     margin-bottom: 10px;
     background-color: rgb(232, 250, 73);
-   }
-
-/* esto no sé si sirve de algo*/
-
-
-   .big-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    box-align:right;
-    padding: 5px;
-    background-color: rgb(255, 255, 255);
-       }
-
+}
 
 .third-container {
     display: flex;
@@ -71,24 +83,24 @@ body {
     margin-left: 10px;
     margin-right: 10px;
     background-color: rgb(92, 92, 92);
-       }
+}
     
-    .item3 {
+.item3 {
     padding: 5px;
     width: 40%;
     height: 150px;
     margin-top: 10px;
     margin-bottom: 10px;
     background-color: rgb(11, 21, 160);
-    }
+}
     
-    .bigitem3 {
+.bigitem3 {
     padding: 5px;
     width: 54%;
     height: 150px;
     margin-top: 10px;
     background-color: rgb(14, 245, 234);
-    }
+}
 
     
 .fourth-countainer {
@@ -101,10 +113,10 @@ body {
     margin-left: 10px;
     margin-right: 10px;
     background-color: rgb(184, 3, 3);
-   }
+}
 
       
-   .item4 {
+.item4 {
     padding: 10px;
     height: 150px;
     width: 100%;
@@ -113,25 +125,63 @@ body {
     margin-right: 11px;
     margin-bottom: 10px;
     background-color: rgb(232, 250, 73);
-   }
+}
 
 
-   
 .fifth-container {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     padding: 5px;
-    margin-top: 10px;   }
+    margin-top: 10px; 
+    background-color: rgb(0, 0, 0);  
+}
 
       
-   .bigitem5 {
+.bigitem5 {
     padding: 10px;
     height: 150px;
-    width: 100%;
-    margin-top: 10px;
-    margin-left: 11px;
-    margin-right: 11px;
-    margin-bottom: 10px;
+    width: 95%;
     background-color: rgb(232, 250, 73);
-   }
+}
+
+/* Versión para pantallas tablet */
+
+@media (max-width: 930px) {
+
+.fourth-countainer {
+    width: 100%;
+}
+
+.third-container {
+    width: 100%
+}
+
+.big-container2 {
+    background-color: rgb(229, 255, 0);
+}
+
+}
+
+/* Versión móvil */
+@media (max-width: 530px) {
+
+.item {
+    width:100%
+}
+
+.item2 {
+    width:100%
+}
+
+.bigitem {
+    width:100%
+}
+
+.item3 {
+    width:100%
+}
+
+.bigitem3 {
+    width:100%
+}
