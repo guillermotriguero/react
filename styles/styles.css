@@ -1,29 +1,52 @@
 
 body {
-    background-color: rgb(255, 255, 255);}
+    width: 1200px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
 
+a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(95, 90, 90);
+}
+
+/*Por algún motivo el list-stype-type que quita los bullets
+solo funciona aplicado directamente al ul.
+El display flex los alinea en horizontal*/
+
+ul {
+    list-style-type: none;
+    display: flex;
+
+}
+
+/*El padding solo funciona aplicado al li*/
+
+li {
+    display: flex;
+    padding: 10px;
+}
 
 /* fondo negro alrededor de las cajas*/
 
 .big-container {
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-around;
-        padding: 2px;
         background-color: rgb(0, 0, 0);
-           }
+}
 
 /* lo mismo que el anterior pero lo pongo aparte para
 que cambie de color en versión tablet solo éste*/
 
 .big-container2 {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        padding: 2px;
-        background-color: rgb(0, 0, 0);
-               }
-    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    background-color: rgb(0, 0, 0);
+}
 
 .container {
     display: flex;
@@ -31,10 +54,21 @@ que cambie de color en versión tablet solo éste*/
     width: 95%;
     justify-content: space-around;
     padding: 10px;
-    background-color: rgb(92, 92, 92);
-   }
+    background-color: rgb(255, 255, 255);
+}
 
 .item {
+    display: flex;
+    padding: 5px;
+    width: 20%;
+    height: 150px;
+    /* código usado antes que creo que no hacía falta
+    margin-top: 10px;
+    margin-bottom: 10px;*/
+    background-color: rgb(255, 255, 255);
+}
+
+.item-redes {
     padding: 5px;
     width: 20%;
     height: 150px;
@@ -43,12 +77,16 @@ que cambie de color en versión tablet solo éste*/
     background-color: rgb(245, 14, 14);
 }
 
+/* Éste es el menú de navegación*/
+
 .bigitem {
-    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
     width: 48%;
     height: 150px;
-    margin-top: 10px;
-    background-color: rgb(245, 14, 14);
+    background-color: rgb(255, 255, 255);
 }
 
 
@@ -64,6 +102,9 @@ que cambie de color en versión tablet solo éste*/
 
       
 .item2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 10px;
     height: 150px;
     width: 100%;
@@ -71,7 +112,14 @@ que cambie de color en versión tablet solo éste*/
     margin-left: 11px;
     margin-right: 11px;
     margin-bottom: 10px;
-    background-color: rgb(232, 250, 73);
+    background-image: url(/images/header-background.jpg);
+    background-position-y:660px;
+    background-position-x: center;
+    font-size: 3em;
+    color: rgba(184, 17, 17, 0.7);
+  
+    /*
+    background-color: rgb(232, 250, 73);*/
 }
 
 .third-container {
@@ -147,7 +195,7 @@ que cambie de color en versión tablet solo éste*/
 
 /* Versión para pantallas tablet */
 
-@media (max-width: 930px) {
+@media (max-width: 768px) {
 
 .fourth-countainer {
     width: 100%;
@@ -164,7 +212,7 @@ que cambie de color en versión tablet solo éste*/
 }
 
 /* Versión móvil */
-@media (max-width: 530px) {
+@media (max-width: 576px) {
 
 .item {
     width:100%
