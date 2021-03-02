@@ -33,7 +33,9 @@ li {
 .big-container {
         display: flex;
         flex-flow: row wrap;
-        background-color: rgb(0, 0, 0);
+        background-image: url(/images/header-background.jpg);
+        background-position-y:850px;
+        background-position-x: center;;
 }
 
 /* lo mismo que el anterior pero lo pongo aparte para
@@ -42,8 +44,6 @@ que cambie de color en versión tablet solo éste*/
 .big-container2 {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
     padding: 2px;
     background-color: rgb(0, 0, 0);
 }
@@ -54,7 +54,7 @@ que cambie de color en versión tablet solo éste*/
     width: 95%;
     justify-content: space-around;
     padding: 10px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255, 0.2);
 }
 
 .item {
@@ -65,16 +65,15 @@ que cambie de color en versión tablet solo éste*/
     /* código usado antes que creo que no hacía falta
     margin-top: 10px;
     margin-bottom: 10px;*/
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255, 0.2);
 }
 
 .item-redes {
     padding: 5px;
     width: 20%;
     height: 150px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: rgb(245, 14, 14);
+    margin-top: 40px;
+    background-color: rgb(255, 255, 255, 0.2);
 }
 
 /* Éste es el menú de navegación*/
@@ -86,7 +85,7 @@ que cambie de color en versión tablet solo éste*/
     padding: 10px;
     width: 48%;
     height: 150px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255, 0.2);
 }
 
 
@@ -96,8 +95,8 @@ que cambie de color en versión tablet solo éste*/
     justify-content: space-around;
     width: 95%;
     padding: 5px;
-    margin-top: 10px;
-    background-color: rgb(243, 117, 0);
+    margin-top: 10px; /*
+    background-color: rgb(243, 117, 0)*/;
 }
 
       
@@ -105,6 +104,8 @@ que cambie de color en versión tablet solo éste*/
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: bold;
+    font-family: "Nimbus Roman CHS Bold", Helvetica, sans-serif;
     padding: 10px;
     height: 150px;
     width: 100%;
@@ -112,60 +113,107 @@ que cambie de color en versión tablet solo éste*/
     margin-left: 11px;
     margin-right: 11px;
     margin-bottom: 10px;
+    /*
     background-image: url(/images/header-background.jpg);
     background-position-y:660px;
-    background-position-x: center;
+    background-position-x: center;*/
     font-size: 3em;
-    color: rgba(184, 17, 17, 0.7);
+    color: rgba(184, 17, 17, 0.5);
   
     /*
     background-color: rgb(232, 250, 73);*/
 }
 
+/* caja grande de artículos */
+
 .third-container {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    width: 58%;
+    width: 65%;
     padding: 10px;
+    margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
-    background-color: rgb(92, 92, 92);
-}
-    
-.item3 {
-    padding: 5px;
-    width: 40%;
-    height: 150px;
-    margin-top: 10px;
     margin-bottom: 10px;
-    background-color: rgb(11, 21, 160);
+    background-color: rgb(197, 197, 197);
 }
+    /* Noticias-fichas*/
+.item3 {
+    padding: 2px;
+    width: 45%;
+    margin-bottom: 10px;
+    background-color: white;
+}
+.item3 img {
+
+    width: 100%;
+    height:180px;
+    
+}
+
+.item3 p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    margin-left: 5px;
+    margin-top: 2px;
+}
+
+.date{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:rgb(255, 255, 255, 0.7);
+    text-align: left;
+    margin-left: 5px;
+    position: relative;
+    top: -10%;
+}
+
+.section{
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    color: white;
+    margin-left: px;
+    margin-top: -23px;
+    border-style: solid;
+    border-color: red;
+    background-color: red;
+}
+
+
+.readmore{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: left;
+    margin-left: 5px;
+}
+
     
 .bigitem3 {
     padding: 5px;
-    width: 54%;
+    width: 95%;
     height: 150px;
     margin-top: 10px;
     background-color: rgb(14, 245, 234);
 }
 
+/*Caja lateral derecha*/
     
 .fourth-countainer {
     display: flex;
     flex-flow: row wrap;
+    margin-top: 10px;
+    margin-left: 8px;
+    margin-bottom: 10px;
     justify-content: space-around;
     padding: 5px;
-    width: 34%;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    width: 29%;
     background-color: rgb(184, 3, 3);
 }
-
       
 .item4 {
-    padding: 10px;
+    display: flex;
+    flex-flow: column;
+    padding: 5px;
     height: 150px;
     width: 100%;
     margin-top: 10px;
@@ -184,12 +232,12 @@ que cambie de color en versión tablet solo éste*/
     margin-top: 10px; 
     background-color: rgb(0, 0, 0);  
 }
-
       
 .bigitem5 {
-    padding: 10px;
     height: 150px;
-    width: 95%;
+    width: 98%;
+    margin-bottom: 10px;
+    margin-top: 10px;
     background-color: rgb(232, 250, 73);
 }
 
@@ -197,39 +245,85 @@ que cambie de color en versión tablet solo éste*/
 
 @media (max-width: 768px) {
 
-.fourth-countainer {
-    width: 100%;
-}
-
-.third-container {
-    width: 100%
+.big-container {
+    width: 60%;
 }
 
 .big-container2 {
     background-color: rgb(229, 255, 0);
+  width: 60%
 }
 
+.third-container {
+     flex: 50%;
+}
+    
+.fourth-countainer {
+    width: 96%;
+}
+
+.item3 {
+    width: 330px
+}
+
+.item3 img {
+    width: 330px
+}
+
+.bigitem3 {
+    width: 662px;
+}
+
+.fifth-container {
+    width: 60%;
+}
 }
 
 /* Versión móvil */
 @media (max-width: 576px) {
 
-.item {
-    width:100%
+    .big-container {
+        width: 40%;
+    }
+
+    .big-container img{
+        width:50%;
+        height:35%;
+    }
+
+    .big-container li{
+        margin-top: 70px;
+    }
+
+    .big-container2 {
+        background-color: rgb(229, 255, 0);
+        width: 40%
+    }
+    
+    .third-container {
+        flex: 40%;
+    }
+
+    .item3 {
+        width: 480px;
+    }
+
+    .item3 img {
+        width: 440px;
+        height: 250px;
+    }
+
+    .fourth-countainer {
+        width: 95%;
+    }
+
+    .fifth-container {
+        width: 40%;
+    }
 }
 
-.item2 {
-    width:100%
-}
-
-.bigitem {
-    width:100%
-}
-
-.item3 {
-    width:100%
-}
-
-.bigitem3 {
-    width:100%
-}
+/* Pendiente:
+- Menú alineado izquierda versión móvil.
+- Alinear todo al centro en versión desktop.
+- Ver qué le pasan a las cajas amarillas laterales (han de subir arriba).
+*/
