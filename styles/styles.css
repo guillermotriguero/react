@@ -1,7 +1,5 @@
 
 body {
-    width: 1200px;
-    text-align: center;
     background-color: rgb(255, 255, 255);
 }
 
@@ -31,6 +29,9 @@ li {
 /* fondo negro alrededor de las cajas*/
 
 .big-container {
+        width: 1200px;
+        align-content: center;
+        justify-content: center;
         display: flex;
         flex-flow: row wrap;
         background-image: url(/images/header-background.jpg);
@@ -44,6 +45,9 @@ que cambie de color en versión tablet solo éste*/
 .big-container2 {
     display: flex;
     flex-flow: row wrap;
+    width: 1200px;
+    align-content: center;
+    justify-content: center;
     padding: 2px;
     background-color: rgb(0, 0, 0);
 }
@@ -227,7 +231,9 @@ que cambie de color en versión tablet solo éste*/
 .fifth-container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    width: 1200px;
+    align-content: center;
+    justify-content: center;
     padding: 5px;
     margin-top: 10px; 
     background-color: rgb(0, 0, 0);  
@@ -323,7 +329,9 @@ que cambie de color en versión tablet solo éste*/
 }
 
 /* Pendiente:
-- Menú alineado izquierda versión móvil.
-- Alinear todo al centro en versión desktop.
+- Menú alineado izquierda versión móvil: borrar espacios grandes (recordar no poner heights)
+- Alinear todo al centro en versión desktop: ya puse el width en los containers y no el body
+pero sigue sin funcionar: investigar
 - Ver qué le pasan a las cajas amarillas laterales (han de subir arriba).
+- Hacer que los elementos clicables se subrayen
 */
