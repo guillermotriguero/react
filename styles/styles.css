@@ -1,7 +1,8 @@
-
 body {
     background-color: rgb(255, 255, 255);
 }
+
+/* Estilos de todos los links de la página */ 
 
 a {
     text-decoration: none;
@@ -16,7 +17,6 @@ El display flex los alinea en horizontal*/
 ul {
     list-style-type: none;
     display: flex;
-
 }
 
 /*El padding solo funciona aplicado al li*/
@@ -26,31 +26,24 @@ li {
     padding: 10px;
 }
 
-/* fondo negro alrededor de las cajas*/
+/* CONTAINERS ZONE */
+
+/*HEADER*/
+/* Container grande del header con menú, logo e imagen de cabecera*/
 
 .big-container {
-        width: 1200px;
-        align-content: center;
-        justify-content: center;
-        display: flex;
-        flex-flow: row wrap;
-        background-image: url(/images/header-background.jpg);
-        background-position-y:850px;
-        background-position-x: center;;
-}
-
-/* lo mismo que el anterior pero lo pongo aparte para
-que cambie de color en versión tablet solo éste*/
-
-.big-container2 {
+    width: 1200px;
+            align-content: center; /* ¿por qué no funcionan?*/
+            justify-content: center;
     display: flex;
     flex-flow: row wrap;
-    width: 1200px;
-    align-content: center;
-    justify-content: center;
-    padding: 2px;
-    background-color: rgb(0, 0, 0);
+        
+    background-image: url(/images/header-background.jpg);
+    background-position-y:850px;
+    background-position-x: center;
 }
+
+/* Container del header que va dentro de .big-container (menú, logo...)*/
 
 .container {
     display: flex;
@@ -61,6 +54,7 @@ que cambie de color en versión tablet solo éste*/
     background-color: rgb(255, 255, 255, 0.2);
 }
 
+/* Logo */
 .item {
     display: flex;
     padding: 5px;
@@ -72,6 +66,8 @@ que cambie de color en versión tablet solo éste*/
     background-color: rgb(255, 255, 255, 0.2);
 }
 
+/*Redes sociales*/
+
 .item-redes {
     padding: 5px;
     width: 20%;
@@ -80,7 +76,7 @@ que cambie de color en versión tablet solo éste*/
     background-color: rgb(255, 255, 255, 0.2);
 }
 
-/* Éste es el menú de navegación*/
+/* Menú de navegación*/
 
 .bigitem {
     display: flex;
@@ -92,6 +88,7 @@ que cambie de color en versión tablet solo éste*/
     background-color: rgb(255, 255, 255, 0.2);
 }
 
+/* Imagen del header con eslogan */
 
 .second-container {
     display: flex;
@@ -103,7 +100,6 @@ que cambie de color en versión tablet solo éste*/
     background-color: rgb(243, 117, 0)*/;
 }
 
-      
 .item2 {
     display: flex;
     align-items: center;
@@ -128,6 +124,20 @@ que cambie de color en versión tablet solo éste*/
     background-color: rgb(232, 250, 73);*/
 }
 
+/*BODY*/
+
+/* Container grande alrededor del body, el contorno negro */
+
+.big-container2 {
+    display: flex;
+    flex-flow: row wrap;
+    width: 1200px;
+    align-content: center;
+    justify-content: center;
+    padding: 2px; /* la parte de negro que se ve alrededor de las cajas*/
+    background-color: rgb(0, 0, 0);
+}
+
 /* caja grande de artículos */
 
 .third-container {
@@ -142,6 +152,7 @@ que cambie de color en versión tablet solo éste*/
     margin-bottom: 10px;
     background-color: rgb(197, 197, 197);
 }
+
     /* Noticias-fichas*/
 .item3 {
     padding: 2px;
@@ -149,11 +160,10 @@ que cambie de color en versión tablet solo éste*/
     margin-bottom: 10px;
     background-color: white;
 }
-.item3 img {
 
+.item3 img {
     width: 100%;
     height:180px;
-    
 }
 
 .item3 p{
@@ -173,7 +183,6 @@ que cambie de color en versión tablet solo éste*/
 }
 
 .section{
-
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: left;
     color: white;
@@ -189,9 +198,17 @@ que cambie de color en versión tablet solo éste*/
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: left;
     margin-left: 5px;
+    margin-bottom: 10px;
 }
 
+.readmore:hover{
+    text-decoration:underline;
+    color: rgba(139, 139, 139, 0.9);
+}
     
+
+/* Caja azul (item 9) debajo de las noticias */
+
 .bigitem3 {
     padding: 5px;
     width: 95%;
@@ -200,8 +217,9 @@ que cambie de color en versión tablet solo éste*/
     background-color: rgb(14, 245, 234);
 }
 
-/*Caja lateral derecha*/
+/*SIDEBAR DERECHO*/
     
+/* Contenedor rojo*/
 .fourth-countainer {
     display: flex;
     flex-flow: row wrap;
@@ -213,7 +231,9 @@ que cambie de color en versión tablet solo éste*/
     width: 29%;
     background-color: rgb(184, 3, 3);
 }
-      
+
+/* Cajas amarillas laterales*/
+
 .item4 {
     display: flex;
     flex-flow: column;
@@ -227,6 +247,9 @@ que cambie de color en versión tablet solo éste*/
     background-color: rgb(232, 250, 73);
 }
 
+/*FOOTER*/
+
+/*Contenedor negro*/
 
 .fifth-container {
     display: flex;
@@ -239,6 +262,8 @@ que cambie de color en versión tablet solo éste*/
     background-color: rgb(0, 0, 0);  
 }
       
+/* Caja amarilla*/
+
 .bigitem5 {
     height: 150px;
     width: 98%;
@@ -247,9 +272,10 @@ que cambie de color en versión tablet solo éste*/
     background-color: rgb(232, 250, 73);
 }
 
+/* MEDIA QUERIES AREA*/
 /* Versión para pantallas tablet */
 
-@media (max-width: 768px) {
+@media (max-width: 1240px) {
 
 .big-container {
     width: 60%;
@@ -333,5 +359,4 @@ que cambie de color en versión tablet solo éste*/
 - Alinear todo al centro en versión desktop: ya puse el width en los containers y no el body
 pero sigue sin funcionar: investigar
 - Ver qué le pasan a las cajas amarillas laterales (han de subir arriba).
-- Hacer que los elementos clicables se subrayen
 */
