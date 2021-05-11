@@ -26,17 +26,12 @@ li {
     padding: 10px;
 }
 
-/* CONTAINERS ZONE */
-
 /*HEADER*/
 /* Container grande del header con menú, logo e imagen de cabecera*/
 
 .big-container {
     width: 1200px;
-            align-content: center; /* ¿por qué no funcionan?*/
-            justify-content: center;
-    display: flex;
-    flex-flow: row wrap;
+    margin: auto;
         
     background-image: url(/images/header-background.jpg);
     background-position-y:850px;
@@ -57,14 +52,15 @@ li {
 /* Logo */
 .item {
     display: flex;
-    padding: 5px;
-    width: 20%;
-    height: 150px;
+  
     /* código usado antes que creo que no hacía falta
+     width: 20%; 
     margin-top: 10px;
     margin-bottom: 10px;*/
     background-color: rgb(255, 255, 255, 0.2);
 }
+
+
 
 /*Redes sociales*/
 
@@ -81,11 +77,15 @@ li {
 .bigitem {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; /* Esto me los centra verticalmente*/
     padding: 10px;
     width: 48%;
-    height: 150px;
     background-color: rgb(255, 255, 255, 0.2);
+}
+
+.bigitem a:hover{
+    text-decoration:underline;
+    color: rgba(139, 139, 139, 0.9);
 }
 
 /* Imagen del header con eslogan */
@@ -130,6 +130,7 @@ li {
 
 .big-container2 {
     display: flex;
+    margin: auto;  /* Esto me centra todo el bloque*/
     flex-flow: row wrap;
     width: 1200px;
     align-content: center;
@@ -193,7 +194,6 @@ li {
     background-color: red;
 }
 
-
 .readmore{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: left;
@@ -206,7 +206,6 @@ li {
     color: rgba(139, 139, 139, 0.9);
 }
     
-
 /* Caja azul (item 9) debajo de las noticias */
 
 .bigitem3 {
@@ -222,11 +221,11 @@ li {
 /* Contenedor rojo*/
 .fourth-countainer {
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: column;
+    align-items: center;
     margin-top: 10px;
     margin-left: 8px;
     margin-bottom: 10px;
-    justify-content: space-around;
     padding: 5px;
     width: 29%;
     background-color: rgb(184, 3, 3);
@@ -236,14 +235,12 @@ li {
 
 .item4 {
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
     padding: 5px;
     height: 150px;
-    width: 100%;
-    margin-top: 10px;
-    margin-left: 11px;
-    margin-right: 11px;
-    margin-bottom: 10px;
+    width: 90%;
     background-color: rgb(232, 250, 73);
 }
 
@@ -254,6 +251,7 @@ li {
 .fifth-container {
     display: flex;
     flex-flow: row wrap;
+    margin: auto;
     width: 1200px;
     align-content: center;
     justify-content: center;
@@ -272,91 +270,241 @@ li {
     background-color: rgb(232, 250, 73);
 }
 
-/* MEDIA QUERIES AREA*/
-/* Versión para pantallas tablet */
+/* |||||||||||||||| MEDIA QUERIES AREA ||||||||||||||||  */
+
+/* VERSIÓN TABLET */
 
 @media (max-width: 1240px) {
 
-.big-container {
-    width: 60%;
-}
-
-.big-container2 {
-    background-color: rgb(229, 255, 0);
-  width: 60%
-}
-
-.third-container {
-     flex: 50%;
-}
-    
-.fourth-countainer {
-    width: 96%;
-}
-
-.item3 {
-    width: 330px
-}
-
-.item3 img {
-    width: 330px
-}
-
-.bigitem3 {
-    width: 662px;
-}
-
-.fifth-container {
-    width: 60%;
-}
-}
-
-/* Versión móvil */
-@media (max-width: 576px) {
-
-    .big-container {
-        width: 40%;
+    body {
+        background-color: rgb(15, 236, 26);
     }
 
+    /*HEADER*/
+
+    /* Container del header que va dentro de .big-container (menú, logo...)*/
+    .container {
+        display: block;  /* En versión tablet nos conviene que los elementos se pongan uno debajo de otro*/
+    }
+
+    /* Container grande del header con menú, logo e imagen de cabecera*/
+
+    .big-container {
+        width: 80%;
+    }
+
+    /* Menú de navegación*/
+
+    .bigitem {
+        display: block;
+        position: relative;
+        left: -40px;
+    }
+
+    ul {
+        display: block;
+    }
+
+    /* Logo */
+    .item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .item img {
+        height: 90px;
+    }
+
+    /*Redes sociales*/
+
+    .item-redes {
+        position: relative;
+        top: -160px;
+        right: -300px;
+        margin: auto; /* para centrarlo horizontalmente*/
+    }
+
+    /*Slogan*/
+
+    .item2{
+        font-size: 2em;
+        height: 50px;
+    }
+
+    /*BODY*/
+
+    /* Container grande alrededor del body, el contorno negro */
+
+    .big-container2 {
+        background-color: rgb(229, 255, 0);
+        width: 80%
+    }
+
+    /* Caja grande de artículos */
+
+    .third-container {
+        flex: 50%;
+    }
+
+    /* Noticias-fichas */ 
+
+    .item3 {
+        width: 330px
+    }
+
+    .item3 img {
+        width: 330px
+    }
+
+    /*SIDEBAR DERECHO*/
+        
+    /* Contenedor rojo*/
+        
+    .fourth-countainer {
+        width: 96%;
+    }
+
+    /*FOOTER*/
+
+    /*Contenedor negro*/
+
+    .fifth-container {
+        width: 80%;
+    }
+
+
+/* VERSIÓN MÓVIL */
+@media (max-width: 750px) {
+
+    body {
+        background-color: rgb(15, 85, 236);
+    }
+
+    /*HEADER*/
+
+    .item-redes {
+        right: -170px;
+    }
+
+    .item2{
+        font-size: 1.5em;
+        height: 50px;
+    }
+
+    /*BODY*/
+
+    /* Noticias-fichas */ 
+
+    .item3 {
+         width: 300px
+    }
+    
+    .item3 img {
+        width: 300px
+     }
+
+
+/* DUDAS VERSIÓN RESPONSIVE:
+
+CONSEJOS PABLO:
+RESPONSIVE
+- Poner logo arriba y menú centrado: menos margen a los lados
+- En vez de flex row ponemos flex column p.e. para que quepa todo
+
+
+
+- Hasta donde hemos de estrechar en versión móvil?
+     - Por qué no se centra? (mismo problema que versión desktop)
+- Menú se sale por fuera / Redes sociales no encajan
+- Menú diferente disposición dentro de mismos tamaños versión tablet.
+¿Hay que hacer media queries intermedios?
+
+DUDAS GENERALES
+    - Alinear todo al centro en versión desktop: ya puse el width en los containers y no el body
+pero sigue sin funcionar: investigar
+
+- Menú alineado izquierda versión móvil: borrar espacios grandes (recordar no poner heights)
+
+
+VERSIÓN MÓVIL DE ANTES:
+
+
+    /*HEADER*/
+    /* Container grande del header con menú, logo e imagen de cabecera*/
+
+    /* .big-container {
+        width: 80%;
+    }
+
+    /* Container grande del header con menú, logo e imagen de cabecera*/
+
+/*    
+    
     .big-container img{
-        width:50%;
-        height:35%;
+        width:60%;
     }
 
     .big-container li{
         margin-top: 70px;
     }
 
-    .big-container2 {
-        background-color: rgb(229, 255, 0);
-        width: 40%
-    }
+    /*Redes sociales*/
+
+
+/* Menú de navegación*/
+
+/* .bigitem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Esto me los centra verticalmente*/
+    /* padding: 10px;
+    width: 48%;
+    background-color: rgb(255, 255, 255, 0.2); */
+
     
+    /*BODY*/
+
+    /* Container grande alrededor del body, el contorno negro */
+
+    /* .big-container2 {
+        background-color: rgb(229, 255, 0);
+        width: 50%
+    } */
+
+    /* Caja grande de artículos */
+/*     
     .third-container {
         flex: 40%;
-    }
+    } */
 
-    .item3 {
+    /* Noticias-fichas */ 
+
+    /* .item3 {
         width: 480px;
     }
 
     .item3 img {
         width: 440px;
         height: 250px;
-    }
+    } */
 
+    /*SIDEBAR DERECHO*/
+    
+    /* Contenedor rojo*/
+/* 
     .fourth-countainer {
         width: 95%;
-    }
+    } */
 
-    .fifth-container {
-        width: 40%;
-    }
-}
+    /*FOOTER*/
 
-/* Pendiente:
-- Menú alineado izquierda versión móvil: borrar espacios grandes (recordar no poner heights)
-- Alinear todo al centro en versión desktop: ya puse el width en los containers y no el body
-pero sigue sin funcionar: investigar
-- Ver qué le pasan a las cajas amarillas laterales (han de subir arriba).
-*/
+    /*Contenedor negro*/
+
+    /* .fifth-container {
+        width: 80%;
+    }
+} */
+
+
+}  
