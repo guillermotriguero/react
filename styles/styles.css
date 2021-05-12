@@ -32,7 +32,7 @@ li {
 .big-container {
     width: 1200px;
     margin: auto;
-    background-image: url(/images/header-background.jpg);
+    background-image: url(../images/header-background.jpg);
     background-position-y:850px;
     background-position-x: center;
 }
