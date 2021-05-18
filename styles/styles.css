@@ -30,10 +30,10 @@ li {
 /* Container grande del header con menú, logo e imagen de cabecera*/
 
 .big-container {
-    width: 1200px;
+
     margin: auto;
     background-image: url(../images/header-background.jpg);
-    background-position-y:850px;
+    background-position-y:790px;
     background-position-x: center;
 }
 
@@ -51,6 +51,11 @@ li {
 /* Logo */
 .item {
     display: flex;
+    /* height: 150px; En lugar de darle el height a la capa
+    se lo doy a la imagen: ver abajo */
+}
+
+.item img{
     height: 150px;
 }
 
@@ -58,8 +63,6 @@ li {
 
 .item-redes {
     padding: 5px;
-    width: 20%;
-    height: 150px;
     margin-top: 40px;
 }
 
@@ -83,9 +86,6 @@ li {
 .second-container {
     display: flex;
     flex-flow: row wrap;
-    width: 95%;
-    padding: 5px;
-    margin-top: 10px;
 }
 
 .item2 {
@@ -94,10 +94,9 @@ li {
     justify-content: center;
     font-weight: bold;
     font-family: "Nimbus Roman CHS Bold", Helvetica, sans-serif;
-    padding: 10px;
-    height: 150px;
+    padding: 48px;
+    /*height: 150px;  en lugar de esto es mejor un padding más grande o un min-height*/
     width: 100%;
-    margin-top: 10px;
     margin-left: 11px;
     margin-right: 11px;
     margin-bottom: 10px;
@@ -144,7 +143,6 @@ li {
 
 .item3 img {
     width: 100%;
-    height:180px;
 }
 
 .item3 p{
@@ -257,35 +255,27 @@ li {
 
 @media (max-width: 1240px) {
 
-    /* body {
+    body {
         background-color: rgb(15, 236, 26);
-    } */
+    }
 
     /*HEADER*/
 
-    /* Container del header que va dentro de .big-container (menú, logo...)*/
-    .container {
-        display: block; 
-        /* En versión tablet nos conviene que los elementos se pongan uno debajo de otro*/
-    }
-
     /* Container grande del header con menú, logo e imagen de cabecera*/
 
+    /* En maquetaciones tablet-móvil es bueno que ocupe mucho sitio.
+    Recomendación Pablo: width auto + margin de 5 px*/
+
     .big-container {
-        width: 80%;
+        width: auto;
+        margin: 5px;
     }
 
     /* Menú de navegación*/
 
     .bigitem {
-        display: block;
-        position: relative;
-        left: -40px;
+      
         background-color: transparent;
-    }
-
-    ul {
-        display: block;
     }
 
     /* Logo */
@@ -303,9 +293,8 @@ li {
     /*Redes sociales*/
 
     .item-redes {
-        position: relative;
-        top: -160px;
-        right: -300px;
+        display: block;
+        align-items: right;
         background-color: transparent;
         margin: auto; /* para centrarlo horizontalmente*/
     }
@@ -314,7 +303,6 @@ li {
 
     .item2{
         font-size: 2em;
-        height: 50px;
     }
 
     /*BODY*/
@@ -323,23 +311,14 @@ li {
 
     .big-container2 {
         background-color: rgb(229, 255, 0);
-        width: 80%
+        width: auto;
+        margin: 5px;
     }
 
     /* Caja grande de artículos */
 
     .third-container {
         flex: 50%;
-    }
-
-    /* Noticias-fichas */ 
-
-    .item3 {
-        width: 330px
-    }
-
-    .item3 img {
-        width: 330px
     }
 
     /*SIDEBAR DERECHO*/
@@ -355,20 +334,22 @@ li {
     /*Contenedor negro*/
 
     .fifth-container {
-        width: 80%;
+        width: auto;
+        margin: 5px;
     }
 
 /* VERSIÓN MÓVIL */
 @media (max-width: 750px) {
 
-    /* body {
+    body {
         background-color: rgb(15, 85, 236);
-    } */
+    }
 
     /*HEADER*/
+    /* Oculto el texto del menú para dejar solo iconos */ 
 
-    .item-redes {
-        right: -170px;
+    .bigitem span{
+        display: none;
     }
 
     .item2{
